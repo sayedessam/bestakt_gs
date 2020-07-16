@@ -229,6 +229,12 @@
         <span    
         >&copy; 2018 - {{ new Date().getFullYear() }} BesTakt DWC-LLC Dubai
         </span>
+
+        <span>
+          |-----|
+          <v-icon color="secondary">mdi-lock-outline</v-icon>
+          نلتزم بسياسة الخصوصية وسرية المعلومات
+        </span>
         <v-spacer></v-spacer>
         <v-icon class="mx-4" size="24px" color="secondary">mdi-telegram</v-icon>
         Telegram:

@@ -186,6 +186,39 @@
     
     
     <br />
+
+<v-container fluid >
+		<v-row class="text-h4 secondary--text white" justify="center">
+			لدينا محترفون على برامج
+		</v-row>
+    <v-row class="white" align="center" justify="space-between">
+    
+		
+
+        <v-col cols="6" sm="4">
+        <v-img width="200"
+				:src="require('~/odoo.png')"
+				>
+         
+        </v-img>
+      </v-col>
+
+      <v-col cols="6" sm="4">
+        <v-img width="200"
+				:src="require('~/oracle.png')"
+				>
+          
+        </v-img>
+      </v-col>
+				<v-col cols="6" sm="4" >
+        <v-img height="85"
+          :src="require('~/SAP.jpg')"
+          
+        ></v-img>
+      </v-col>
+    </v-row>
+  </v-container>
+		<br />
     
     <v-card
       class="mx-auto"
