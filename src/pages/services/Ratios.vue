@@ -5,6 +5,10 @@
   
     المؤشرات المالية
   </h1>
+  <g-image alt="Procure to Pay Process | استعانة بمصادر خارجية" 
+				src="~/Financial ratiospng.png" fit width="900" />
+    <br>
+    <br>  
   </div>
   
   </Layout>

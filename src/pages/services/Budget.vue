@@ -5,6 +5,11 @@
   
   الموازنة التقديرية السنوية
   </h1>
+
+  <g-image alt="Procure to Pay Process | استعانة بمصادر خارجية" 
+				src="~/Budgeting.png" fit width="900" />
+    <br>
+    <br>  
   </div>
   
   </Layout>

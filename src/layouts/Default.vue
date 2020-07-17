@@ -60,6 +60,23 @@
             </v-list-item-content>
           </v-list-item>
           <!-- end of menu item -->
+          <!-- menu item -->
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon color="#14cba8">mdi-lock</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>
+               <g-link 
+                style="font-size: 1rem; text-decoration: none;" 
+                class="font-weight-bold nav__link secondary--text"
+                to="/privacy/">
+                 سياسة الخصوصية
+                 </g-link>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <!-- end of menu item -->
           <v-divider></v-divider>
           <v-subheader class="font-weight-bold"
              style="font-size: 1.5rem; " 
@@ -163,6 +180,23 @@
                 class="font-weight-bold nav__link secondary--text"
                 to="/services/budget/">
                  الموازنة السنوية 
+                 </g-link>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <!-- end of menu item -->
+          <!-- menu item -->
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon color="#14cba8">mdi-file-table-outline</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>
+               <g-link 
+                style="font-size: 1rem; text-decoration: none;" 
+                class="font-weight-bold nav__link secondary--text"
+                to="/about/">
+                 خدمات أخرى
                  </g-link>
               </v-list-item-title>
             </v-list-item-content>

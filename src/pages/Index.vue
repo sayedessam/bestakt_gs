@@ -181,7 +181,7 @@
                      
       </v-card>
     </v-container>
-  
+  <!-- End of 3. Free consultation card -->
     
     
     
