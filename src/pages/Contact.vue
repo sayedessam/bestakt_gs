@@ -123,6 +123,12 @@ export default {
 	methods: {
 		  sendMessage() {
         this.isSending = true
+        if (!this.$refs.form.validate()) {
+					swal('خطأ!',
+					'من فضلك تصحيح الخطأ', 'error')
+					this.isSending = false
+					return
+				}
         const cloudFunc = 'https://us-central1-bestakt-v1-0.cloudfunctions.net/bestakt_contact_email'
         const req = {
           to: 'client@bestakt.com',

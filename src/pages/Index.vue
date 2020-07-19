@@ -583,7 +583,13 @@ export default {
 	},
 	methods: {
 		  sendMessage() {
-        this.isSending = true
+				this.isSending = true
+				if (!this.$refs.form.validate()) {
+					swal('خطأ!',
+					'من فضلك تصحيح الخطأ', 'error')
+					this.isSending = false
+					return
+				}
         const cloudFunc = 'https://us-central1-bestakt-v1-0.cloudfunctions.net/bestakt_contact_email'
         const req = {
           to: 'client@bestakt.com',
@@ -613,9 +619,7 @@ export default {
 					"تم إرسال إستفسارك بنجاح وسيتم التواصل معكم خلال 24 ساعة", "success")
 
 					this.isSending=false
-					this.name=''
-					this.email=''
-					this.text=''
+					this.$refs.form.reset()
           
           } )
       }
