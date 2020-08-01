@@ -261,14 +261,12 @@
         <v-card-text class="pa-0">
       
         <span    
-        >&copy; 2018 - {{ new Date().getFullYear() }} BesTakt DWC-LLC Dubai
+        >&copy; 2018-{{ new Date().getFullYear() }} 
+        <b class="secondary--text">BesTakt </b>
+         DWC-LLC, Dubai
         </span>
 
-        <span>
-          |-----|
-          <v-icon color="secondary">mdi-lock-outline</v-icon>
-          نلتزم بسياسة الخصوصية وسرية المعلومات
-        </span>
+        
         <v-spacer></v-spacer>
         <v-icon class="mx-4" size="24px" color="secondary">mdi-telegram</v-icon>
         Telegram:
@@ -283,7 +281,12 @@
         <b class="secondary--text">
           client@bestakt.com
         </b>
-        
+         <v-spacer></v-spacer>
+         <span>
+          
+          <v-icon color="secondary">mdi-lock-outline</v-icon>
+          نلتزم بسياسة الخصوصية وسرية المعلومات
+        </span>
         </v-card-text>
       </v-card>
       

@@ -36,6 +36,7 @@
     <br>
     <br>
     <h2>
+      <v-icon color="secondary" large>mdi-layers-plus</v-icon>
       أهمية إعداد الموازنة التقديرية
     </h2>
     <p>
@@ -46,20 +47,41 @@
     </p>
     <br>
     <h2 class="secondary--text center font-weight-bold">
-خبراء بست تاكت (BesTakt) يقدمون نموذج مجانى للموازنة السنوية
+خبراء بست تاكت (BesTakt) يقدمون نماذج مجانية للموازنة السنوية
     
     <v-btn color="primary secondary--text" class=" font-weight-bold" to="/contact">
       إتصل بنا (إستشارة مجانية)
-    </v-btn>
-    </h2> <br>
+    </v-btn></h2> 
+    <br>
+    <br>
+<g-image alt="نماذج مجانية للموازنة السنوية" 
+				src="~/revenue1.png" fit="contain" style="width: 80%; display: block; margin: auto;" />
+  <p class="center">
+نماذج مبسطة وجاهزة لإعداد الموازنة بسهولة لتحقيق أهدافك
+
+  </p>
+  <p class="center  secondary--text">
+    أرسل لنا طلبك مع تحديد القطاع الذي تعمل به ، مثلاً:
+تجارة الجملة
+تجارة التجزئة
+فندق / شقق مفروشة
+مقاولات
+نقل ركاب أو بضائع وتخزين
+مركز طبي
+مدرسة أو جامعة
+
+
+  </p>
+    <br>
       <h2>
+        <v-icon color="secondary" large>mdi-numeric-1-box-multiple</v-icon>
          الإيرادات (المبيعات) التقديرية
       </h2>
     <p>
      تحدد ميزانية المبيعات (الإيرادات)  تدفق الدخل المتوقع للأعمال. وعادة ما تكون أول ميزانية يتم إعدادها لأن الإيرادات المتولدة ستحدد في نهاية المطاف مستوى الإنفاق. في إطار ميزانية المبيعات ، من المتوقع مبيعات الشركة. يتم توقع المبيعات من حيث حجم المبيعات وإيرادات المبيعات. ويتم التنبؤ على أساس ما يلي:
 
     </p>
-    <ol>
+    <ol class="mr-10">
       <li>
 دراسة المنافسين واتجاهات أسعار السوق ومواطن القوة والضعف للشركة وكذلك الفرص والتهديدات الخارجية.
       </li>
@@ -75,6 +97,7 @@
     </ol>
     <br>
     <h2>
+      <v-icon color="secondary" large>mdi-numeric-2-box-multiple</v-icon>
        التكلفة التقديرية المتغيرة
     </h2>
     <p>
@@ -88,6 +111,7 @@
     </p>
     <br>
     <h2>
+      <v-icon color="secondary" large>mdi-numeric-3-box-multiple</v-icon>
       التكلفة التقديرية الثابتة 
     </h2>
     <p>
@@ -98,6 +122,7 @@
     </p>
     <br>
     <h2>
+      <v-icon color="secondary" large>mdi-numeric-4-box-multiple</v-icon>
 الموازنة الرأسمالية
     </h2>
     <p>
@@ -109,6 +134,7 @@
 
     <br>
     <h2>
+      <v-icon color="secondary" large>mdi-numeric-5-box-multiple</v-icon>
 الأرباح والعوائد التقديرية 
     </h2>
     <p>
@@ -120,22 +146,39 @@
 
     <br>
     <h2>
+      <v-icon color="secondary" large>mdi-numeric-6-box-multiple</v-icon>
 توزيع الموازنة على الإدارات
     </h2>
     <p>
 يتم تقسيم الموازنة على فترات وإدارات الشركة المختلفة ، ثم يتم توزيعها على الإدارات بعد الموافقة عليها والأهم وجود أهداف واضحة يمكن قياسها ونظام مكافآت واضح يحفز العاملين والمديرين بالشركة على تحقيق الأهداف.
     </p>
     <br>
+    <g-image alt="نموذج قائمة الدخل" 
+				src="~/pl1.png" fit="contain" style="width: 70%; display: block; margin: auto;" />
+  <p class="center">
+نموذج قائمة الدخل والنسب المالية المرتبطة بها
+
+  </p>
     <p>
 شكراً لكم
     </p>
 
     <br>
-    <br>
+  
     <v-btn color="primary secondary--text" class=" font-weight-bold" to="/contact">
       إتصل بنا (إستشارة مجانية)
     </v-btn>
-
+  <br>
+  <br>
+  <h3 class="center red--text">
+    خصم 100%
+    <v-icon color="secondary">mdi-tag-off-outline</v-icon>
+      لمدة محدودة - مجاناً الموازنة مع العقود السنوية 
+      <span class="text-decoration-line-through">
+      بدلاً من 1900 دولار أمريكي
+      </span>
+      </h3>
+      <br>
 
 
   </v-container>
