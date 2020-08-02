@@ -212,6 +212,12 @@
       </v-col>
 				<v-col cols="6" sm="4" >
         <v-img height="85"
+          :src="require('~/QBO.png')"
+          
+        ></v-img>
+      </v-col>
+				<v-col cols="6" sm="4" >
+        <v-img height="85"
           :src="require('~/SAP.jpg')"
           
         ></v-img>
