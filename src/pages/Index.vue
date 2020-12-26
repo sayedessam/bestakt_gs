@@ -46,15 +46,8 @@
 		</v-row>
 
     
-<!-- 2. Promotion -->
-    <h3 class="mx-auto center red--text">
-    خصم 30%
-    <v-icon color="secondary">mdi-tag-off-outline</v-icon>
-      لمدة محدودة - أسعار تبدأ من 699 دولار أمريكي/الشهر بدلاً من
-      <span class="text-decoration-line-through">
-      908 دولار أمريكي
-      </span>
-      </h3>
+<!-- 2. Links -->
+    
 			<div class="center">
 				<v-btn rounded color="primary" class="black--text mt-1 font-weight-bold"
 				to="/services/employees">
@@ -86,107 +79,69 @@
 			
       <!-- <h4 class="center" style="color: #9b27af;"> ( إدارة العاملين والمرتبات - المشتريات وحسابات الموردين - المبيعات / الإيرادات وحسابات العملاء - المحاسبة - الزكاة والضرائب ) </h4> -->
 
-    <!-- 3. Free consultation card -->
-    <v-container max-width="600">
-
-      <v-card dense elevation="8" outlined max-width="700" class="mx-auto">
-			<v-row dense justify="center" align="center">
-				<v-col>
-					<v-card-title
-          	class="headline secondary--text font-weight-bold"      
-					>
-					استشارة مجانية
-					</v-card-title>
-				</v-col>
-			</v-row>
-      
-			<v-row dense align="center" justify="center">
-        <v-col cols="3" offset="1">
-          <v-avatar
-						class="ma-1"
-						size="100"
-						height="135"
-						tile
-					>
-						<v-img :src="require('~/sharawy.png')"
-							width="80"
-						></v-img>
-						
-					</v-avatar>
-        </v-col>
-				<v-col cols="6">
-					<h4>
-						جاهز للرد على إستفساراتك	
-					</h4>	
-					<div>
-						ا/شعراوى المحمدى - 
-							خبير إدارى ومالى
-					</div>
-				</v-col>
-			</v-row>
-			<v-row dense>
-          <v-col cols="10" offset="1">
-          <div>
-                
-                <v-card dense color="green lighten-5" >
-                <v-form
-                  ref="form"
-                >
-                  <v-text-field
-                  color="black"
-                    outlined
-                    label="الاسم"
-										v-model="name"
-                    :rules="[rules.required]"
-                  ></v-text-field>
-
-                  <v-text-field
-                    color="black"
-                    outlined
-                    label="البريد الاكترونى"
-                    v-model="email"
-                    :rules="[rules.required, rules.email]"
-                  ></v-text-field>
-                  <v-textarea
-                    color="black"
-                    outlined
-                    label="اسئلة / استفسارات"
-										v-model="text"
-                    :rules="[rules.required]"
-                  >
-                  
-                  </v-textarea>
-                  <v-btn
-                    color="primary"
-                    class="mr-4 black--text font-weight-bold"
-                    :disabled="isSending"
-										@click="sendMessage"
-                  >
-									<span v-if="isSending">
-										<v-icon class="purple--text">mdi-selection-ellipse mdi-spin</v-icon>
-									</span>
-									<span v-else>
-                    ارسل
-									</span>
-                  </v-btn>
-
-                  
-                </v-form>
-                </v-card>
-               
-              </div>
-          </v-col>
-          
-        </v-row>
-                     
-      </v-card>
-    </v-container>
-  <!-- End of 3. Free consultation card -->
-    
+    <!-- contact fixed button on bottom right -->
+		<v-btn
+			style="background-color: purple; bottom: 25px; box-shadow: 10px 10px 5px grey;"
+			fab
+			dark
+			rounded
+			fixed
+			bottom
+			right
+			x-large
+			outlined
+			icon
+			elevation="20"
+			
+			to="/contact"
+			ripple
+		>
+		<v-icon color="#FAFAFA">
+			mdi-account-tie-voice
+		</v-icon>
+		</v-btn>
+    <br>
+    <!-- Promotion -->
+	
     
     
     <br />
-
+		<v-container fluid class="py-3">
+			
+			<v-row class="text-h5 secondary--text white py-3" justify="center">
+				<h4 class="mx-3 center red--text my-6">
+    خصم 50%
+    <v-icon color="secondary">mdi-tag-off-outline</v-icon>
+      حتي 31 يناير 2021 - إقفال السنة المالية 2020 أسعار تبدأ من 499 دولار أمريكي/الشهر بدلاً من
+      <span class="text-decoration-line-through">
+      998 دولار أمريكي
+      </span>
+			
+      </h4>
+			<br /><br />
+				<ul class="font-weight-bold">
+					<li>
+						مطابقة حسابات العملاء
+					</li>
+					<li>
+						مطاقة حسابات الموردين والموظفين
+					</li>
+					<li>
+						مطابقة حسابات البنوك
+					</li>
+					<li>
+						إقفال الحسابات الختامية وإصدار القوائم المالية
+					</li>
+					<li>
+						إعداد ملف كامل للمراجع الخارجي
+					</li>
+					
+				</ul>
+				
+		</v-row>	
+		<br>
+		</v-container>
+		<br />
 <v-container fluid >
 		<v-row class="text-h4 secondary--text white" justify="center">
 			لدينا محترفون على برامج
@@ -196,7 +151,7 @@
 		
 
         <v-col cols="6" sm="4">
-        <v-img width="200"
+        <v-img width="150"
 				:src="require('~/odoo.png')"
 				>
          
@@ -204,20 +159,20 @@
       </v-col>
 
       <v-col cols="6" sm="4">
-        <v-img width="200"
+        <v-img width="150"
 				:src="require('~/oracle.png')"
 				>
           
         </v-img>
       </v-col>
 				<v-col cols="6" sm="4" >
-        <v-img height="85"
+        <v-img width="200"
           :src="require('~/QBO.png')"
           
         ></v-img>
       </v-col>
 				<v-col cols="6" sm="4" >
-        <v-img height="85"
+        <v-img width="150"
           :src="require('~/SAP.jpg')"
           
         ></v-img>
@@ -326,11 +281,6 @@
 <br><br>
         <p class="home-links center">
 
-          <a href="https://mawdoo3.com/%D9%85%D8%A7_%D9%85%D8%B9%D9%86%D9%89_%D8%A7%D9%84%D8%B3%D9%8A%D9%88%D9%84%D8%A9_%D9%81%D9%8A_%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF" target="_blank" rel="noopener"
-					class="secondary--text"
-					> الأهم: السيولة النقدية أم الأرباح؟ </a>
-
-					<br><br>
           <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B9%D9%85%D9%84_%D8%B9%D9%86_%D8%A8%D8%B9%D8%AF" target="_blank" rel="noopener"
 					class="secondary--text"
 					> العمل عن بعد فى عصر كورونا </a>

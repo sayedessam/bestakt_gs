@@ -11,6 +11,31 @@
 					إتصل بنا
 					</v-card-title>
 				</v-col>
+        <v-col>
+          <v-badge
+            x-large
+            bordered
+            bottom
+            color="purple"
+            right
+            
+            offset-x="110"
+          >
+            <template v-slot:badge height="20px">
+              
+                <span >جاهز للرد علي إستفساراتك</span>
+              
+            </template>
+          
+            <v-avatar size="100">
+                
+              <v-img :src="require('~/sharawy.png')"></v-img>
+                
+            </v-avatar>
+        
+        
+          </v-badge>
+        </v-col>
 			</v-row>
       	<v-row dense justify="center" align="center">
 				<v-col>
@@ -20,6 +45,9 @@
 					سيتم الرد عليكم خلال 24 ساعة عمل
 					</v-card-subtitle>
 				</v-col>
+        <v-col>
+          <span>أ/شعراوي المحمدي - خبير مالي ولإداري</span>
+        </v-col>
 			</v-row>
 			<v-row dense>
           <v-col cols="10" offset="1">
