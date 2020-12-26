@@ -46,7 +46,7 @@
 					</v-card-subtitle>
 				</v-col>
         <v-col>
-          <span>أ/شعراوي المحمدي - خبير مالي ولإداري</span>
+          <span>أ/شعراوي المحمدي - خبير إداري ومالي </span>
         </v-col>
 			</v-row>
 			<v-row dense>

@@ -100,31 +100,38 @@
 			mdi-account-tie-voice
 		</v-icon>
 		</v-btn>
-    <br>
+    
     <!-- Promotion -->
 	
     
     
     <br />
-		<v-container fluid class="py-3">
+		<v-card fluid class="py-3">
 			
-			<v-row class="text-h5 secondary--text white py-3" justify="center">
-				<h4 class="mx-3 center red--text my-6">
+			<v-row class="secondary--text py-1" justify="center">
+				<h3 class="mx-4 center red--text my-2">
     خصم 50%
     <v-icon color="secondary">mdi-tag-off-outline</v-icon>
-      حتي 31 يناير 2021 - إقفال السنة المالية 2020 أسعار تبدأ من 499 دولار أمريكي/الشهر بدلاً من
+      حتي 31 يناير 2021 - إقفال السنة المالية 2020 بأسعار تبدأ من 499 دولار أمريكي/الشهر بدلاً من
       <span class="text-decoration-line-through">
       998 دولار أمريكي
       </span>
 			
-      </h4>
-			<br /><br />
-				<ul class="font-weight-bold">
+      </h3>
+			</v-row>
+			<v-row justify="center" class="mb-4">
+				<v-btn rounded color="primary" class="black--text px-6 font-weight-bold"
+			to="/services/procure">
+				إشتـــــــرك الآن	
+			</v-btn>
+			</v-row>
+			<v-row  class="secondary--text pb-3" justify="center">
+				<ul class="font-weight-bold mx-4 pr-4">
 					<li>
 						مطابقة حسابات العملاء
 					</li>
 					<li>
-						مطاقة حسابات الموردين والموظفين
+						مطابقة حسابات الموردين والموظفين
 					</li>
 					<li>
 						مطابقة حسابات البنوك
@@ -139,44 +146,43 @@
 				</ul>
 				
 		</v-row>	
-		<br>
-		</v-container>
+	
+		</v-card>
 		<br />
-<v-container fluid >
-		<v-row class="text-h4 secondary--text white" justify="center">
+<v-container fluid justify="center">
+		<v-row class="text-h5 secondary--text white font-weight-bold py-2" justify="center">
 			لدينا محترفون على برامج
 		</v-row>
-    <v-row class="white" align="center" justify="space-between">
+    <v-row class="white" align="center" justify="center">
     
-		
+			
 
-        <v-col cols="6" sm="4">
-        <v-img width="150"
-				:src="require('~/odoo.png')"
-				>
-         
-        </v-img>
-      </v-col>
+        <v-col cols="6" align="center">
+					<v-img width="150"
+					:src="require('~/odoo.png')"
+					aspect-ratio="2.9"
+					>
+					</v-img>
+					<br>
+					<v-img width="150"
+					:src="require('~/oracle.png')"
+					aspect-ratio="3.2"
+					>
+					</v-img>
+      	</v-col>
 
-      <v-col cols="6" sm="4">
-        <v-img width="150"
-				:src="require('~/oracle.png')"
-				>
-          
-        </v-img>
-      </v-col>
-				<v-col cols="6" sm="4" >
-        <v-img width="200"
-          :src="require('~/QBO.png')"
-          
-        ></v-img>
-      </v-col>
-				<v-col cols="6" sm="4" >
-        <v-img width="150"
-          :src="require('~/SAP.jpg')"
-          
-        ></v-img>
-      </v-col>
+				
+				<v-col cols="6" align="center">
+					<v-img width="150" 
+						:src="require('~/SAP.jpg')"
+						aspect-ratio="3.2"
+					></v-img>
+					<br>
+					<v-img width="150"
+						:src="require('~/QBO.png')"
+						aspect-ratio="2.9"
+					></v-img>
+      	</v-col>
     </v-row>
   </v-container>
 		<br />
