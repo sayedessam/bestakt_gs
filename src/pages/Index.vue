@@ -121,7 +121,7 @@
 			</v-row>
 			<v-row justify="center" class="mb-4">
 				<v-btn rounded color="primary" class="black--text px-6 font-weight-bold"
-			to="/services/procure">
+			to="/contact">
 				إشتـــــــرك الآن	
 			</v-btn>
 			</v-row>
