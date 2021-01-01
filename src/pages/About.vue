@@ -69,7 +69,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'عنا'
+    title: 'About'
   },
   data() {
     return {

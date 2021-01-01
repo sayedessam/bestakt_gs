@@ -525,7 +525,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Outsourcing'
+    title: 'Business Outsourcing'
   },
 	data() {
 		return {

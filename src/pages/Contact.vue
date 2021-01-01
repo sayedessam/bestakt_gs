@@ -128,7 +128,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'إتصل بنا'
+    title: 'Contact us'
   },
   data() {
 		return {

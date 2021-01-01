@@ -305,7 +305,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Procure-to-Pay'
+    title: 'Financial Ratios'
   },
   data() {
     return {

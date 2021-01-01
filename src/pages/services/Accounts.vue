@@ -161,7 +161,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Procure-to-Pay'
+    title: 'Record-to-Report Process'
   },
   data() {
     return {

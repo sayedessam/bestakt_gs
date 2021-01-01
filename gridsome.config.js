@@ -6,5 +6,24 @@
 
 module.exports = {
   siteName: 'BesTakt',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: [],
+        config: {
+          '/services/*': {
+            changefreq: 'monthly',
+            priority: 0.5,
+            lastmod: '2021-01-01',
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7,
+            lastmod: '2021-01-01',
+          }
+        }
+      }
+    }
+  ]
 }
