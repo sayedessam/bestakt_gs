@@ -6,17 +6,13 @@
 
 module.exports = {
   siteName: 'BesTakt',
+  siteUrl: 'https://www.bestakt.com',
+  siteDescription: 'Business Outsourcing | خدمات إدارية ومالية عن بعد وإستعانة بمصادر خارجية',
   plugins: [
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: [],
         config: {
-          '/services/*': {
-            changefreq: 'monthly',
-            priority: 0.5,
-            lastmod: '2021-01-01',
-          },
           '/about': {
             changefreq: 'monthly',
             priority: 0.7,
