@@ -106,13 +106,13 @@
     
     
     <br />
-		<v-card fluid class="py-3">
+		<v-card fluid class="py-3" color="#D4E157">
 			
 			<v-row class="secondary--text py-1" justify="center">
-				<h3 class="mx-4 center red--text my-2">
+				<h3 class="mx-4 center red--text text--darken-4 my-2">
     خصم 50%
     <v-icon color="secondary">mdi-tag-off-outline</v-icon>
-      حتي 31 يناير 2021 - إقفال السنة المالية 2020 بأسعار تبدأ من 499 دولار أمريكي/الشهر بدلاً من
+      حتي 31 يناير 2021 - إقفال السنة المالية 2020 بالكامل بأسعار تبدأ من 499 دولار أمريكي بدلاً من
       <span class="text-decoration-line-through">
       998 دولار أمريكي
       </span>
