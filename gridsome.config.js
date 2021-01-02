@@ -23,6 +23,12 @@ module.exports = {
     },
     {
       use: 'gridsome-plugin-robots-txt'
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-186356232-1'
+      }
     }
   ]
 }
