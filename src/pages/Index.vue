@@ -9,7 +9,60 @@
  
 
   <v-container >
-    <!-- 1. Title -->
+    <!-- 2. Links -->
+    
+			<div class="center">
+				<v-btn rounded color="primary" class="black--text mt-1 font-weight-bold"
+				to="/services/employees">
+				ادارة العاملين
+				<span class="secondary white--text mr-2">(H2R)</span>	
+			</v-btn>
+
+			<v-btn rounded color="primary" class="black--text mr-2 mt-1 font-weight-bold"
+			to="/services/procure">
+				المشتريات
+				<span class="secondary white--text mr-2 mt-1">(P2P)</span>	
+			</v-btn>
+
+			<v-btn rounded color="primary" class="black--text mr-2 mt-1 font-weight-bold"
+			to="/services/revenue">
+				الإيرادات	
+				<span class="secondary white--text mr-2 mt-1">(O2C)</span>	
+			</v-btn>
+
+			<v-btn rounded color="primary" class="black--text mr-2 mt-1 font-weight-bold"
+			to="/services/accounts"
+			>
+			المحاسبة
+				<span class="secondary white--text mr-1">(R2R)</span>	
+			</v-btn>
+			<br><br>
+			</div>
+
+		<!-- Carousel -->
+		<div style="max-width: 900px; margin: auto;">
+		<v-carousel
+			cycle
+			:height="carousel_ht"
+			interval= 8000
+			show-arrows-on-hover
+			hide-delimiters
+  	>
+			<v-carousel-item
+				:src="require('~/Cover-page.png')"
+				to="/"
+			>
+    	</v-carousel-item>
+			<v-carousel-item
+				:src="require('~/Jan21-Promo.png')"
+				to="/contact"
+			>
+    	</v-carousel-item>
+  </v-carousel>
+	</div>
+		<!-- Carousel end -->
+
+		<!-- 1. Main Heading -->
 
     <h1 class="mx-auto center secondary--text">
     خدمات إدارية ومالية بأسعار فى المتناول
@@ -17,7 +70,7 @@
 
 	<!-- 	style="position: relative; top: 7px; display: block; margin-left: auto;
 				margin-right: auto;"  -->
-		<v-row align="center" justify="center" dense>
+		<!-- <v-row align="center" justify="center" dense>
 			<v-col cols="12" sm="2" class="center font-weight-bold" dense>
 				<g-image alt="Outsourcing | استعانة بمصادر خارجية" 
 				src="~/Outsourcing.png" width="70" />
@@ -45,36 +98,8 @@
 			</v-col>
 		</v-row>
 
-    
-<!-- 2. Links -->
-    
-			<div class="center">
-				<v-btn rounded color="primary" class="black--text mt-1 font-weight-bold"
-				to="/services/employees">
-				ادارة العاملين
-				<span class="secondary white--text mr-2">(H2R)</span>	
-			</v-btn>
+     -->
 
-			<v-btn rounded color="primary" class="black--text mr-2 mt-1 font-weight-bold"
-			to="/services/procure">
-				المشتريات
-				<span class="secondary white--text mr-2 mt-1">(P2P)</span>	
-			</v-btn>
-
-			<v-btn rounded color="primary" class="black--text mr-2 mt-1 font-weight-bold"
-			to="/services/revenue">
-				الإيرادات	
-				<span class="secondary white--text mr-2 mt-1">(O2C)</span>	
-			</v-btn>
-
-			<v-btn rounded color="primary" class="black--text mr-2 mt-1 font-weight-bold"
-			to="/services/accounts"
-			>
-			المحاسبة
-				<span class="secondary white--text mr-1">(R2R)</span>	
-			</v-btn>
-
-			</div>
 			
 			
       <!-- <h4 class="center" style="color: #9b27af;"> ( إدارة العاملين والمرتبات - المشتريات وحسابات الموردين - المبيعات / الإيرادات وحسابات العملاء - المحاسبة - الزكاة والضرائب ) </h4> -->
@@ -101,7 +126,7 @@
 		</v-icon>
 		</v-btn>
     
-    <!-- Promotion -->
+    <!-- Promotion
 	
     
     
@@ -147,9 +172,9 @@
 				
 		</v-row>	
 	
-		</v-card>
-		<br />
-<v-container fluid justify="center">
+		</v-card> -->
+		
+<v-container fluid justify="center" style="max-width:900px">
 		<v-row class="text-h5 secondary--text white font-weight-bold py-2" justify="center">
 			لدينا محترفون على برامج
 		</v-row>
@@ -185,6 +210,7 @@
       	</v-col>
     </v-row>
   </v-container>
+	
 		<br />
     
     <v-card
@@ -540,9 +566,21 @@ export default {
             const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             return pattern.test(value) || 'خطأ'
           }
-        }
+				},
+			slides: [
+            {url: '/', img: '~/Cover-page.png'},
+            {url: '/about', img: '~/Jan21-Promo.png'},
+          
+					],
 		}
 	},
+	computed: {
+        carousel_ht: () => {
+          return visualViewport.width > 600 ? 500 : 300
+				},
+				
+				
+			},
 	methods: {
 		  sendMessage() {
 				this.isSending = true
