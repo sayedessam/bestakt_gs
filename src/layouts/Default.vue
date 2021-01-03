@@ -1,6 +1,6 @@
 <template>
  
-  <v-app id="inspire"
+  <v-app id="inspire" ref="bestaktapp"
     style="background: #EBEDDD;
     background: -webkit-linear-gradient(to right, #EBEDDD,#EBEDDD,#F0F0EB);
     background: linear-gradient(to right, #EBEDDD,#EBEDDD,#F0F0EB);

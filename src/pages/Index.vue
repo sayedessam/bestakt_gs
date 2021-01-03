@@ -8,7 +8,7 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
  
 
-  <v-container >
+  <v-container ref="bestaktapp">
     <!-- 2. Links -->
     
 			<div class="center">
@@ -559,6 +559,7 @@ export default {
 			isSending: false,
 			name: '',
 			email: '',
+			carousel_ht: 300,
 			text: '',
 			rules: {
           required: value => !!value || 'مطلوب',
@@ -575,15 +576,13 @@ export default {
 					],
 		}
 	},
-	computed: {
-        carousel_ht: () => {
-          return window.innerWidth > 600 ? 500 : 300
-				},
-				
-				
-			},
+	
 	methods: {
-		  sendMessage() {
+		calcWidth() {
+			if(this.$refs.body.clientWidth > 600) this.carousel_ht = 600
+			this.carousel_ht = 300
+		},
+		sendMessage() {
 				this.isSending = true
 				if (!this.$refs.form.validate()) {
 					swal('خطأ!',
