@@ -49,6 +49,20 @@
           <span>أ/الشعراوي المحمدي - خبير إداري ومالي </span>
         </v-col>
 			</v-row>
+      	<v-row class="secondary--text py-1" justify="center">
+          
+				<h3 class="mx-4 center red--text text--darken-4 my-2">
+    خصم 50%
+    <v-icon color="secondary">mdi-tag-off-outline</v-icon>
+      حتي 31 يناير 2021 - إقفال السنة المالية 2020 بالكامل بأسعار تبدأ من 499 دولار أمريكي بدلاً من
+      <span class="text-decoration-line-through">
+      998 دولار أمريكي
+      </span>
+			
+      </h3>
+      <h4>للإشتراك أكمل البيانات الآتية ثم إضغط أرسل أسفل الصفحة</h4>
+			</v-row>
+      
 			<v-row dense>
           <v-col cols="10" offset="1">
           <div>
