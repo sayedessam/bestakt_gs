@@ -576,7 +576,7 @@ export default {
 	},
 	computed: {
         carousel_ht: () => {
-          return visualViewport.width > 600 ? 500 : 300
+          return document.documentElement.clientWidth > 600 ? 500 : 300
 				},
 				
 				
