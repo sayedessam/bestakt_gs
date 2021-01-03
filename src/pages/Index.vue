@@ -49,13 +49,14 @@
 			hide-delimiters
   	>
 			<v-carousel-item
-				:src="require('~/Cover-page.png')"
-				to="/"
-			>
-    	</v-carousel-item>
-			<v-carousel-item
 				:src="require('~/Jan21-Promo.png')"
 				to="/contact"
+			>
+    	</v-carousel-item>
+
+			<v-carousel-item
+				:src="require('~/Cover-page.png')"
+				to="/"
 			>
     	</v-carousel-item>
   </v-carousel>
@@ -576,7 +577,7 @@ export default {
 	},
 	computed: {
         carousel_ht: () => {
-          return document.documentElement.clientWidth > 600 ? 500 : 300
+          return window.innerWidth > 600 ? 500 : 300
 				},
 				
 				
