@@ -559,7 +559,7 @@ export default {
 			isSending: false,
 			name: '',
 			email: '',
-			carousel_ht: 300,
+			
 			text: '',
 			rules: {
           required: value => !!value || 'مطلوب',
@@ -577,11 +577,17 @@ export default {
 		}
 	},
 	
+	mounted () {
+		
+		console.log(this.$vuetify.breakpoint.width)
+	},
+	computed: {
+		carousel_ht () {
+			return this.$vuetify.breakpoint.width > 600 ? 600 : 300
+		}
+	
+	},
 	methods: {
-		calcWidth() {
-			if(this.$refs.body.clientWidth > 600) this.carousel_ht = 600
-			this.carousel_ht = 300
-		},
 		sendMessage() {
 				this.isSending = true
 				if (!this.$refs.form.validate()) {
