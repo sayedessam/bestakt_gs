@@ -53,7 +53,9 @@
                <g-link 
                 style="font-size: 1rem; text-decoration: none;" 
                 class="font-weight-bold nav__link secondary--text"
-                to="/contact/">
+                @click="contactUs"
+                to="/contact/"
+                >
                  إتصل بنا
                  </g-link>
               </v-list-item-title>
@@ -94,7 +96,7 @@
                 style="font-size: 1rem; text-decoration: none;" 
                 class="font-weight-bold nav__link secondary--text"
                 to="/services/employees/">
-                 إدارة العاملين
+                 المرتبات وإدارة الموظفين
                  </g-link>
               </v-list-item-title>
             </v-list-item-content>
@@ -240,7 +242,7 @@
        
       </nav>
     </header>
-    <slot/>
+    <slot :msgTitle="msgTitle"/>
         </v-container>
       </v-main>
 
@@ -312,7 +314,14 @@ export default {
 
   data: () => ({
     drawer: null,
-  })
+    msgTitle: "--"
+  }),
+  methods: {
+    	contactUs() {
+			this.$store.dispatch('setSubject', '')
+			this.$router.push('/contact')
+		}
+  }
 }
 </script>
 <style>

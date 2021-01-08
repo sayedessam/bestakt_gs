@@ -9,8 +9,16 @@
  
 
   <v-container ref="bestaktapp">
-    <!-- 2. Links -->
     
+		<!-- 1. Main Heading -->
+
+    <h1 class="mx-auto font-weight-bold center secondary--text  text-h5 text-sm-h4">
+    خدمات إدارية ومالية بأسعار فى المتناول
+    </h1>
+		<br>
+		
+		<!-- 2. Links -->
+<!--     
 			<div class="center">
 				<v-btn rounded color="primary" class="black--text mt-1 font-weight-bold"
 				to="/services/employees">
@@ -38,19 +46,24 @@
 			</v-btn>
 			<br><br>
 			</div>
-
+ -->
 		<!-- Carousel -->
 		<div style="max-width: 900px; margin: auto;">
 		<v-carousel
 			cycle
+			continuous
 			:height="carousel_ht"
-			interval= 8000
+			interval= 7000
 			show-arrows-on-hover
 			hide-delimiters
   	>
 			<v-carousel-item
+				:src="require('~/Jan21-Promo1.png')"
+				@click="promoRoute1"
+			></v-carousel-item>
+			<v-carousel-item
 				:src="require('~/Jan21-Promo.png')"
-				to="/contact"
+				@click="promoRoute"
 			>
     	</v-carousel-item>
 
@@ -63,11 +76,7 @@
 	</div>
 		<!-- Carousel end -->
 
-		<!-- 1. Main Heading -->
-
-    <h1 class="mx-auto center secondary--text">
-    خدمات إدارية ومالية بأسعار فى المتناول
-    </h1>
+		
 
 	<!-- 	style="position: relative; top: 7px; display: block; margin-left: auto;
 				margin-right: auto;"  -->
@@ -105,7 +114,7 @@
 			
       <!-- <h4 class="center" style="color: #9b27af;"> ( إدارة العاملين والمرتبات - المشتريات وحسابات الموردين - المبيعات / الإيرادات وحسابات العملاء - المحاسبة - الزكاة والضرائب ) </h4> -->
 
-    <!-- contact fixed button on bottom right -->
+    <!-- contact us fixed button on bottom right -->
 		<v-btn
 			style="background-color: purple; bottom: 25px; box-shadow: 10px 10px 5px grey;"
 			fab
@@ -119,7 +128,7 @@
 			icon
 			elevation="20"
 			
-			to="/contact"
+			@click="contactUs"
 			ripple
 		>
 		<v-icon color="#FAFAFA">
@@ -213,10 +222,14 @@
   </v-container>
 	
 		<br />
-    
+
+		<Hrm />
+		<Acct />
+		<Kpis />
+		<Plan />
     <v-card
       class="mx-auto"
-      max-width="600"
+      max-width="850"
       
     >
        <v-img
@@ -248,7 +261,7 @@
 
 <v-card
       class="mx-auto"
-      max-width="600"
+      max-width="850"
       
     >
        <v-img
@@ -279,7 +292,7 @@
 <br />
   <v-card
       class="mx-auto"
-      max-width="600"
+      max-width="850"
       
     >
        <v-img
@@ -550,16 +563,28 @@
 </template>
 
 <script>
+import Acct from '~/components/Acct.vue'
+import Hrm from '~/components/Hrm.vue'
+import Kpis from '~/components/Kpis.vue'
+import Plan from '~/components/Plan.vue'
+
+
 export default {
   metaInfo: {
     title: 'Business Outsourcing'
-  },
+	},
+	components: {
+		Acct,
+		Hrm,
+		Plan,
+		Kpis
+	},
 	data() {
 		return {
 			isSending: false,
 			name: '',
 			email: '',
-			
+			subject: 'Consultancy request',
 			text: '',
 			rules: {
           required: value => !!value || 'مطلوب',
@@ -578,7 +603,7 @@ export default {
 	},
 	
 	mounted () {
-		
+		console.log(this.$el.offsetWidth)
 		console.log(this.$vuetify.breakpoint.width)
 	},
 	computed: {
@@ -588,47 +613,22 @@ export default {
 	
 	},
 	methods: {
-		sendMessage() {
-				this.isSending = true
-				if (!this.$refs.form.validate()) {
-					swal('خطأ!',
-					'من فضلك تصحيح الخطأ', 'error')
-					this.isSending = false
-					return
-				}
-        const cloudFunc = 'https://us-central1-bestakt-v1-0.cloudfunctions.net/bestakt_contact_email'
-        const req = {
-          to: 'client@bestakt.com',
-          subject: 'Consultancy request',
-          text: `
-          from: ${this.name} \n
-          email: ${this.email} \n
-          message: ${this.text}
-          `
-        }
-        fetch(cloudFunc, {
-          method: 'POST', // *GET, POST, PUT, DELETE, etc.
-          mode: 'cors', // no-cors, *cors, same-origin
-          cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-          //credentials: 'same-origin', // include, *same-origin, omit
-          headers: {
-            'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          redirect: 'follow', // manual, *follow, error
-          referrerPolicy: 'no-referrer', // no-referrer, *client
-          body: JSON.stringify(req) // body data type must match "Content-Type" header
-        })
-        .then( res => res.json() )
-        .then (data => {
-					swal("شكراً جزيلاً", 
-					"تم إرسال إستفسارك بنجاح وسيتم التواصل معكم خلال 24 ساعة", "success")
-
-					this.isSending=false
-					this.$refs.form.reset()
-          
-          } )
-      }
+		promoRoute() {
+			this.$store.dispatch('setSubject', 
+			'عرض إقفال السنة المالية 2020 بخصم 50%')
+			this.$router.push('/contact')
+		},
+		promoRoute1() {
+			this.$store.dispatch('setSubject', 
+			'الإشتراك في عرض مؤشرات قياس الأداء المجاني')
+			this.$router.push('/contact')
+		},
+		contactUs() {
+			this.$store.dispatch('setSubject', 
+			'')
+			this.$router.push('/contact')
+		}
+		
 	}
 }
 </script>

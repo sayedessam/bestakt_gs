@@ -2,12 +2,13 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import Vuetify from 'vuetify'
+import Vuex from 'vuex'
 import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import colors from 'vuetify/lib/util/colors'
 
 
-export default function (Vue, { router, head, appOptions, isClient }) {
+export default function (Vue, { router, head, appOptions, isClient  }) {
 
   head.link.push({
     rel: 'stylesheet',
@@ -32,6 +33,31 @@ export default function (Vue, { router, head, appOptions, isClient }) {
       },
     },
    } //opts includes, vuetify themes, icons, etc.
+   Vue.use(Vuex)
+   appOptions.store = new Vuex.Store({
+     state: {
+       subject: 'إستفسارات'
+     },
+     mutations: {
+      setSubject(state, payload) {
+        state.subject = payload
+      }
+     },
+     actions: {
+      setSubject(state, payload) {
+        state.commit('setSubject', payload)
+      }
+     },
+     modules: {
+
+     },
+     getters: {
+       getSubject(state) {
+         return state.subject
+       }
+     }
+   })
+
   Vue.use(Vuetify)
   
   appOptions.vuetify = new Vuetify(opts)
