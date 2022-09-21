@@ -11,7 +11,7 @@
     "@gridsome/plugin-sitemap": "^0.4.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-robots-txt": "^1.0.2",
-    "vuetify": "^2.3.3",
+    "vuetify": "^2.6.10",
     "vuex": "^3.6.0"
   },
   "devDependencies": {
